@@ -1,0 +1,225 @@
+ body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            background-color: #f8f9fa; /* Light gray background */
+            overflow-x: hidden; /* Prevent horizontal scrollbar from sidebar */
+        }
+
+        #wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #sidebar-wrapper {
+            width: 250px;
+            flex-shrink: 0; /* Prevent shrinking */
+            background-color: #ffffff; /* White background for sidebar */
+            border-right: 1px solid #dee2e6; /* Light border */
+            transition: margin .25s ease-out;
+            position: sticky; /* Keep sidebar visible on scroll */
+            top: 0;
+            left: 0;
+            overflow-y: auto; /* Enable scrolling for sidebar content */
+        }
+
+        #page-content-wrapper {
+            flex-grow: 1;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrollbar on main content */
+        }
+
+        /* Toggled state for sidebar */
+        /* You can add a button to toggle this if desired */
+        /* #wrapper.toggled #sidebar-wrapper {
+            margin-left: -250px;
+        }
+
+        #wrapper.toggled #page-content-wrapper {
+            margin-left: 0;
+        } */
+
+        .card {
+            border: none;
+            border-radius: 0.75rem; /* More rounded corners */
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; /* Lighter shadow */
+            background-color: #ffffff;
+        }
+
+        /* .list-group-item {
+            border-radius: 0 !important;
+            padding-left: 1.5rem;
+            color: #495057; 
+            font-size: 0.9rem;
+        } */
+         
+    
+        .sidebar-heading {
+            padding: 1.25rem 1.5rem;
+            font-size: 0.85rem;
+            color: #000102;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navbar {
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 1.5rem;
+            background-color: #ffffff;
+        }
+        .navbar .input-group .form-control {
+            border-radius: 0.5rem;
+            background-color: #f8f9fa;
+            border-color: #e9ecef;
+        }
+        .navbar .input-group .input-group-text {
+            background-color: transparent;
+            border: none;
+            color: #6c757d;
+        }
+
+        .activity-item .fa-solid, .activity-item .fa-regular {
+            font-size: 1.1rem;
+            width: 25px; /* Fixed width for icon */
+            text-align: center;
+        }
+
+        .transaction-table img {
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+
+        .progress {
+            height: 5px;
+            background-color: #e9ecef;
+        }
+        .progress-bar {
+            border-radius: 0.25rem;
+        }
+
+        .social-media-icon {
+            font-size: 1.1rem;
+            width: 25px; /* Fixed width for icon */
+            text-align: center;
+        }
+
+        /* Specific styles for chart placeholders */
+        .chart-placeholder {
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6c757d;
+            font-size: 0.85rem;
+            border-radius: 0.5rem; /* Match card radius */
+        }
+        .chart-doughnut-placeholder {
+             width: 100px;
+             height: 100px;
+             border-radius: 50%;
+             background-color: #e9ecef;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             position: relative;
+             overflow: hidden; /* Hide overflow for percentage fill */
+             border: 5px solid #d4e0e5; /* Outer ring */
+        }
+        .chart-doughnut-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(#007bff 62%, transparent 62%); /* Example 62% fill */
+        }
+        .chart-doughnut-placeholder span {
+            position: relative; /* Bring text to front */
+            z-index: 1;
+            background-color: white; /* Center circle */
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Sidebar bottom promo */
+        .sidebar-promo {
+            background-color: #e9f5ff; /* Light blue background */
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 1.5rem; /* Margin from sidebar edges */
+        }
+        .sidebar-promo img {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        .sidebar-promo .btn {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767.98px) {
+            #sidebar-wrapper {
+                margin-left: -250px; /* Hide sidebar by default on small screens */
+                position: fixed;
+                height: 100vh;
+                z-index: 1030; /* Above navbar */
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: 0;
+            }
+            #page-content-wrapper {
+                width: 100%;
+            }
+            .navbar-brand {
+                margin-right: 0; /* Adjust spacing */
+            }
+            .navbar .d-flex.ms-auto {
+                width: 100%; /* Make search bar wider */
+                justify-content: space-between;
+            }
+            .navbar .input-group {
+                flex-grow: 1;
+                margin-right: 0.5rem !important;
+            }
+            .navbar-nav {
+                display: none !important; /* Hide secondary icons for now */
+            }
+            .breadcrumb {
+                display: none; /* Hide breadcrumbs on small screens */
+            }
+            .buy-space-card img {
+                display: none; /* Hide image on small screens */
+            }
+        }
+
+
+
+
+
+
+
+
+             .bar-container {
+            display: flex;
+            align-items: flex-end; /* Align bars to the bottom */
+            min-height: 150px; /* Give some height to the chart area */
+            border-left: 1px solid #ccc; /* Y-axis */
+            border-bottom: 1px solid #ccc; /* X-axis */
+            padding-bottom: 5px; /* Space for labels if needed */
+        }
+        .bar {
+            width: 30px; /* Width of each bar */
+            background-color: #007bff; /* Primary blue color */
+            margin: 0 5px; /* Spacing between bars */
+            transition: height 0.3s ease-in-out; /* Optional: for a subtle animation if heights change */
+        }

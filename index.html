@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koho Medical Dashboard</title>
+<link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   
+</head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-primary d-flex align-items-center p-3">
+                <img src="logo.jpeg" alt="logo" height="30" class="me-2">
+                <span class="fw-bold fs-5">FOLIO</span>
+            </div>
+            <div class="list-group list-group-flush">
+                <div class="sidebar-heading">General</div>
+                <a href="#" class="list-group-item list-group-item-action bg-light d-flex justify-content-between align-items-center">
+                    Dashboards <i class="fas fa-chevron-down fa-xs"></i>
+                </a>
+                <div class="collapse show" id="dashboardsSubmenu">
+                    <a href="#" class="list-group-item list-group-item-action bg-light ps-5 ">Default</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light ps-5">Ecommerce</a>
+                </div>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-chart-line fa-fw me-2"></i> Widgets</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-columns fa-fw me-2"></i> Page Layout</a>
+
+                <div class="sidebar-heading mt-3">Applications</div>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-project-diagram fa-fw me-2"></i> Project</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-folder fa-fw me-2"></i> File Manager</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-grip-vertical fa-fw me-2"></i> Kanban Board</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-envelope fa-fw me-2"></i> Email</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-comment-dots fa-fw me-2"></i> Chat</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-users fa-fw me-2"></i> Users</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-bookmark fa-fw me-2"></i> Bookmarks</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-address-book fa-fw me-2"></i> Contacts</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-tasks fa-fw me-2"></i> Tasks</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-calendar-alt fa-fw me-2"></i> Calendar</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-share-alt fa-fw me-2"></i> Social App</a>
+            </div>
+
+        </div>
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-none d-md-block" href="#"></a> <div class="input-group" style="max-width: 300px;">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search here..." aria-label="Search">
+                        <span class="input-group-text bg-transparent border-0"><i class="fas fa-search"></i></span>
+                    </div>
+
+                    <div class="d-flex align-items-center ms-auto">
+                        <ul class="navbar-nav flex-row me-3 d-none d-lg-flex">
+                            <li class="nav-item me-2"><a class="nav-link" href="#"><i class="fas fa-globe"></i></a></li>
+                            <li class="nav-item me-2"><a class="nav-link" href="#"><i class="fas fa-star"></i></a></li>
+                            <li class="nav-item me-2"><a class="nav-link" href="#"><i class="fas fa-bell"></i></a></li>
+                            <li class="nav-item me-2"><a class="nav-link" href="#"><i class="fas fa-cog"></i></a></li>
+                        </ul>
+                        <div class="dropdown">
+                            <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown">
+                                <img src="men.jpg" alt="men" class="rounded-circle me-2" width="30" height="30">
+                                <span class="d-none d-lg-block text-dark">Helen Walter</span>
+                                </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="display: none; position: absolute;">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-4 flex-grow-1 overflow-auto">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="mb-0">Default Dashboard</h4>
+                    <nav aria-label="breadcrumb" class="d-none d-md-block">
+                        <ol class="breadcrumb mb-0 bg-transparent">
+                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Default</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                      
+                         <img src="image1.jpeg" alt="image1">
+                        
+                    </div>
+                    <div class="col-lg-4 col-md-7 mb-4 mb-lg-0">
+                      <img src="image2.jpeg" alt="image2">
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="card p-3 h-100">
+                            <h6 class="card-subtitle mb-3 text-muted small">Activity</h6>
+                            <div class="activity-item d-flex mb-3">
+                                <div class="me-2 text-primary flex-shrink-0"><i class="fas fa-comment-dots"></i></div>
+                                <div>
+                                    <p class="mb-0 small fw-bold">Review request Jim Smith</p>
+                                    <p class="mb-0 small text-muted">Jan 03 19 12:25 PM at Tame</p>
+                                </div>
+                            </div>
+                            <div class="activity-item d-flex mb-3">
+                                <div class="me-2 text-success flex-shrink-0"><i class="fas fa-user-plus"></i></div>
+                                <div>
+                                    <p class="mb-0 small fw-bold">New contact added</p>
+                                    <p class="mb-0 small text-muted">Jan 02 19 02:10 PM at Fresno</p>
+                                </div>
+                            </div>
+                            <div class="activity-item d-flex">
+                                <div class="me-2 text-warning flex-shrink-0"><i class="fas fa-star"></i></div>
+                                <div>
+                                    <p class="mb-0 small fw-bold">Sent review (304)236-730</p>
+                                    <p class="mb-0 small text-muted">Jan 01 19 07:35 PM at ma</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="card p-3 h-100">
+                            <h6 class="card-subtitle mb-3 text-muted small">Transaction</h6>
+                            <div class="table-responsive">
+                                <table class="table table-borderless table-sm small transaction-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-muted">Item Name</th>
+                                            <th class="text-muted">Date and Time</th>
+                                            <th class="text-muted">Income</th>
+                                            <th class="text-muted">Progress</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-middle"><img src=" nike.png" alt="Nike" width="24" class="me-2"> Nike Sports NK <br><span class="text-muted">Free delivery</span></td>
+                                            <td class="align-middle">12 May 2022 <br><span class="text-muted">in 6 Days</span></td>
+                                            <td class="text-success fw-bold align-middle">+$456</td>
+                                            <td class="align-middle">
+                                                <div class="progress" style="height: 5px;">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle"><img src="women bag.jpg" alt="Women " width="24" class="me-2"> Women Bag <br><span class="text-muted">7283.65 delivery</span></td>
+                                            <td class="align-middle">06 May 2022 <br><span class="text-muted">in 5 Days</span></td>
+                                            <td class="text-danger fw-bold align-middle">-$80</td>
+                                            <td class="align-middle">
+                                                <div class="progress" style="height: 5px;">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle"><img src="sun class.jpg" alt="Sunglasses" width="24" class="me-2"> Sunglasses <br><span class="text-muted">Free delivery</span></td>
+                                            <td class="align-middle">28 Sep 2022 <br><span class="text-muted">in 3 Months</span></td>
+                                            <td class="text-danger fw-bold align-middle">-$4,232</td>
+                                            <td class="align-middle">
+                                                <div class="progress" style="height: 5px;">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle"><img src="cotton t shirt.jpg" alt="Cotton T-Shirt" width="24" class="me-2"> Cotton T-Shirt <br><span class="text-muted">7283.65 delivery</span></td>
+                                            <td class="align-middle">22 Mar 2022 <br><span class="text-muted">in 8 Days</span></td>
+                                            <td class="text-danger fw-bold align-middle">-$645</td>
+                                            <td class="align-middle">
+                                                <div class="progress" style="height: 5px;">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <div class="card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <span class="badge bg-primary text-white rounded-pill px-2 py-1 mb-2 position-absolute top-0 end-0 mt-3 me-3" style="font-size: 0.7em;">New</span>
+                            <div class="chart-doughnut-placeholder mb-3">
+                                <span class="fw-bold text-primary">62%</span>
+                            </div>
+                            <p class="card-text mb-0 fw-bold">Our Sale Value</p>
+                            <h5 class="text-primary mb-0">$7454.25</h5>
+                        </div>
+                    </div>
+                              <div class="col-lg-3 col-md-6">
+              
+             <div class="card p-3 mb-4">
+            <h5 class="card-title"></h5>
+            <div class="d-flex justify-content-around align-items-end" style="height: 200px; border-left: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6; padding-bottom: 5px;">
+                <div class="bg-primary" style="width: 20px; height: 50%; margin: 0 5px;"></div>
+                <div class="bg-primary" style="width: 20px; height: 75%; margin: 0 5px;"></div>
+                <div class="bg-primary" style="width: 20px; height: 30%; margin: 0 5px;"></div>
+                <div class="bg-primary" style="width: 20px; height: 90%; margin: 0 5px;"></div>
+                <div class="bg-primary" style="width: 20px; height: 60%; margin: 0 5px;"></div>
+            </div>
+            <div class="d-flex justify-content-around small text-muted mt-1">
+                <span>Label 1</span>
+                <span>Label 2</span>
+                <span>Label 3</span>
+                <span>Label 4</span>
+                <span>Label 5</span>
+            </div>
+        </div>
+
+
+                        </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <div class="card p-3 h-100">
+                            <h6 class="card-subtitle mb-3 text-muted small">Today Value</h6>
+                            <div class="chart-placeholder mb-3" style="height: 80px;">
+                    
+                                 <div class="d-flex justify-content-around align-items-end" style="height: 90px; border-left: 1px solid #dee2e6; border-bottom: 1px solid #dee2e6; padding-bottom: 5px;">
+                <div class="bg-danger" style="width: 20px; height: 50%; margin: 0 5px;"></div>
+                <div class="bg-danger" style="width: 20px; height: 75%; margin: 0 5px;"></div>
+                <div class="bg-danger" style="width: 20px; height: 30%; margin: 0 5px;"></div>
+                <div class="bg-danger" style="width: 20px; height: 90%; margin: 0 5px;"></div>
+                <div class="bg-danger" style="width: 20px; height: 60%; margin: 0 5px;"></div>
+            </div>
+                        
+
+                            </div>
+                            <h5 class="mb-0 fw-bold">$5263.04</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
+                        <div class="card p-3 h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="card-subtitle text-muted small mb-0">Beyond The Lines</h6>
+                                <span class="badge bg-secondary text-white">6 hours ago</span>
+                            </div>
+                            <p class="mb-3 small">One Of the world's brightest, young surf Stars, Kanoa Igarashi.</p>
+                            <div class="d-flex align-items-center">
+                                <img src="women__men-removebg-preview.png" alt="women__men-removebg-preview" class="img-fluid rounded me-3" style="max-width: 600px; height: 80px;">
+                                <div class="ms-auto text-end">
+                                    <span class="me-3 text-success fw-bold">+ 350</span>
+                                    <span class="text-muted small">10 June</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-none d-lg-block"></div>
+                </div>
+
+                <div class="row">
+                      <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card p-3 h-100 text-center">
+                            <h6 class="card-subtitle mb-2 text-muted small text-success fw-bold">+13.6%</h6>
+                            <div class="chart-placeholder mb-3">
+                               <img src="line1.jpg" alt="line1" style="height: 50px; width: 100%;">
+                            </div>
+
+
+      
+                            <p class="mb-0 small text-muted">Total Investment</p>
+                            <h5 class="fw-bold mb-0">$7454.25</h5>
+                        </div>
+                    </div>
+                     <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card p-3 h-100 text-center">
+                            <h6 class="card-subtitle mb-2 text-muted small text-success fw-bold">+15.4%</h6>
+                            <div class="chart-placeholder">
+                           <img src="line2.jpg" alt="line2" style="height: 50px; width: 100%;">
+                            </div>
+                            <p class="mb-0 small text-muted">Total Gain</p>
+                            <h5 class="fw-bold mb-0">$7454.25</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card p-3 h-100 text-center">
+                            <h6 class="card-subtitle mb-2 text-muted small text-success fw-bold">+15.4%</h6>
+                            <div class="chart-placeholder">
+                             <img src="line3.jpg" alt="line3" style="height: 50px; width: 100%;">
+                            </div>
+                            <p class="mb-0 small text-muted">Profit in 6 months</p>
+                            <h5 class="fw-bold mb-0">$7454.25</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card p-3 h-100">
+                            <h6 class="card-subtitle mb-3 text-muted small">Top Social Media</h6>
+                            <ul class="list-group list-group-flush small">
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-1 border-0">
+                                    <span class="d-flex align-items-center"><i class="fab fa-facebook social-media-icon me-2 text-primary"></i> Facebook</span>
+                                    <span class="text-success fw-bold">+3.7%</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-1 border-0">
+                                    <span class="d-flex align-items-center"><i class="fab fa-instagram social-media-icon me-2 text-danger"></i> Instagram</span>
+                                    <span class="text-success fw-bold">+3.7%</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-1 border-0">
+                                    <span class="d-flex align-items-center"><i class="fab fa-twitter social-media-icon me-2 text-info"></i> Twitter</span>
+                                    <span class="text-success fw-bold">+7.6%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 mt-2"> <div class="card p-3 buy-space-card">
+                            <div class="d-flex align-items-center flex-column flex-sm-row text-center text-sm-start">
+                                <div class="flex-grow-1 me-sm-3 mb-3 mb-sm-0">
+                                    <h6 class="card-title mb-1 fw-bold">Buy more space now!</h6>
+                                    <p class="card-text small text-muted mb-0">Invite 2 Friends and get 5 GB extra space.</p>
+                                    <button class="btn btn-dark btn-sm mt-3">Upgrade now</button>
+                                </div>
+                                <img src="B_Grl-removebg-preview.png" alt="b B_Grl-removebg-preview" class="img-fluid flex-shrink-0" style="height: 150px; width: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
